@@ -6,7 +6,7 @@ export default function Footer() {
       <div style={{ maxWidth:1060, margin:'0 auto', display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:16 }}>
         <div>
           <p style={{ fontFamily:"'Playfair Display',Georgia,serif", fontSize:13, letterSpacing:'0.15em', textTransform:'uppercase', color:'#111', marginBottom:4 }}> <span style={{color:'#c23616' }}>El Rube</span> Barber Shop.</p>
-          <p style={{ fontSize:10, color:'#ccc', letterSpacing:'0.08em' }}>© {new Date().getFullYear()}.</p>
+          <p style={{ fontSize:10, color:'#ccc', letterSpacing:'0.08em' }}>Todos los derechos reservados © {new Date().getFullYear()}.</p>
         </div>
         <div style={{ display:'flex', gap:20, alignItems:'center' }}>
           <a href="https://www.instagram.com/el_rube21/" target="_blank" rel="noopener noreferrer" style={{ color:'#aaa', display:'flex', textDecoration:'none' }}>
