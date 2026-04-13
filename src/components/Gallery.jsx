@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import photo1 from '../public/image/Imagen-galeria-1.png'
-import photo2 from '../public/image/Imagen-galeria-2.png'
-import photo3 from '../public/image/Imagen-galeria-3.png'
-import photo4 from '../public/image/Imagen-galeria-4.png'
-import photo5 from '../public/image/Imagen-galeria-5.png'
+import photo1 from '../assets/image/Imagen-galeria-1.png'
+import photo2 from '../assets/image/Imagen-galeria-2.png'
+import photo3 from '../assets/image/Imagen-galeria-3.png'
+import photo4 from '../assets/image/Imagen-galeria-4.png'
+import photo5 from '../assets/image/Imagen-galeria-5.png'
 
 const PHOTOS = [
   { id: 1, src: `${photo1}`, alt: 'Corte trasero' },

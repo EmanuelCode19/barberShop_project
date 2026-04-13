@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import logo from '../public/image/logo_rube.jpg'
-import video from '../public/video/video.mp4'
+import logo from '../assets/image/logo_rube.jpg'
+import video from '../assets/video/video.mp4'
 
 const WA = '393662533538'
 const WA_MSG = encodeURIComponent('Hola, quiero reservar una cita en El Rube Barber Shop.')

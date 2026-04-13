@@ -1,4 +1,4 @@
-import barbero from '../public/image/barbero.png'
+import barbero from '../assets/image/barbero.png'
 export default function Owner() {
   return (
     <section style={{ background: '#fafaf8', padding: '88px 48px' }}>
