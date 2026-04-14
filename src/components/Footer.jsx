@@ -2,10 +2,16 @@ const WA = '393662533538'
 
 export default function Footer() {
   return (
-    <footer style={{ background:'#fafaf8', borderTop:'1px solid #eee', padding:'28px 48px' }}>
-      <div style={{ maxWidth:1060, margin:'0 auto', display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:16 }}>
+    <footer style={{ background:'#fafaf8', borderTop:'1px solid #eee', padding:'28px clamp(20px, 4vw, 48px)' }}>
+      <style>{`
+        .footer-inner { max-width: 1060px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+        @media (max-width: 480px) { .footer-inner { flex-direction: column; align-items: flex-start; gap: 20px; } }
+      `}</style>
+      <div className="footer-inner">
         <div>
-          <p style={{ fontFamily:"'Playfair Display',Georgia,serif", fontSize:13, letterSpacing:'0.15em', textTransform:'uppercase', color:'#111', marginBottom:4 }}> <span style={{color:'#c23616' }}>El Rube</span> Barber Shop.</p>
+          <p style={{ fontFamily:"'Playfair Display',Georgia,serif", fontSize:13, letterSpacing:'0.15em', textTransform:'uppercase', color:'#111', marginBottom:4 }}>
+            <span style={{color:'#c23616'}}>El Rube</span> Barber Shop.
+          </p>
           <p style={{ fontSize:10, color:'#ccc', letterSpacing:'0.08em' }}>Todos los derechos reservados © {new Date().getFullYear()}.</p>
         </div>
         <div style={{ display:'flex', gap:20, alignItems:'center' }}>

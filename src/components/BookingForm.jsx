@@ -18,8 +18,17 @@ export default function BookingForm() {
   }
 
   return (
-    <section style={{ background: '#fff', padding: '88px 48px' }}>
-      <div style={{ maxWidth: 1060, margin: '0 auto', display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: 64, alignItems: 'start' }}>
+    <section style={{ background: '#fff', padding: 'clamp(48px, 8vw, 88px) clamp(20px, 4vw, 48px)' }}>
+      <style>{`
+        .booking-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: start; }
+        .date-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 36px; }
+        @media (max-width: 720px) {
+          .booking-grid { grid-template-columns: 1fr; gap: 48px; }
+          .date-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 400px) { .date-grid { grid-template-columns: 1fr; gap: 0; } }
+      `}</style>
+      <div className="booking-grid" style={{ maxWidth: 1060, margin: '0 auto' }}>
 
         <div>
           <h2 style={{ fontFamily:"'Playfair Display',Georgia,serif", fontSize:'clamp(24px,3vw,36px)', fontWeight:400, color:'#111', marginBottom:40 }}>Solicitar Cita</h2>
@@ -33,7 +42,7 @@ export default function BookingForm() {
                 {SERVICES.map(s => <option key={s}>{s}</option>)}
               </select>
             </div>
-            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:24, marginBottom:36 }}>
+            <div className="date-grid">
               <input name="date" type="date" value={form.date} onChange={set} min={today} style={{ ...inp, colorScheme:'light' }} required />
               <select name="hour" value={form.hour} onChange={set} style={{ ...inp, cursor:'pointer' }} required>
                 <option value="" disabled>— : —</option>

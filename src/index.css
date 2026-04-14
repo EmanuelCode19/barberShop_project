@@ -30,3 +30,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0.4;
   cursor: pointer;
 }
+
+/* Prevent horizontal overflow on mobile */
+img, video { max-width: 100%; }
+
+/* Touch-friendly tap targets */
+@media (max-width: 640px) {
+  button, a { -webkit-tap-highlight-color: transparent; }
+}
