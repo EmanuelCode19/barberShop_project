@@ -1,5 +1,11 @@
 const WA = '393662533538'
 
+const urlFooter = [
+  {id:1,name:'Privacy',url:'#', color: '#bbb'},
+  {id:2,name:'Terms',url:'#', color: '#bbb'},
+  {id:3,name:'Sistema desarrollado by Emanuel De Jesus',url:'https://www.linkedin.com/in/emanuel-de-jesus-santana-99a14423b/', color: '#c0392b'},
+]
+
 export default function Footer() {
   return (
     <footer style={{ background:'#fafaf8', borderTop:'1px solid #eee', padding:'28px clamp(20px, 4vw, 48px)' }}>
@@ -26,8 +32,8 @@ export default function Footer() {
           </a>
         </div>
         <div style={{ display:'flex', gap:24 }}>
-          {['Privacy','Terms'].map(l => (
-            <a key={l} href="#" style={{ fontSize:10, letterSpacing:'0.15em', textTransform:'uppercase', color:'#bbb', textDecoration:'none' }}>{l}</a>
+          {urlFooter.map(l => (
+            <a key={l.name} href={l.url} style={{ fontSize:10, letterSpacing:'0.15em', textTransform:'uppercase', color:`${l.color}`, textDecoration:'none' }}>{l.name}</a>
           ))}
         </div>
       </div>

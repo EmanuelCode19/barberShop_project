@@ -13,7 +13,7 @@ export default function BookingForm() {
   const send = e => {
     e.preventDefault()
     if (!form.name || !form.service || !form.date || !form.hour) { alert('Completa todos los campos.'); return }
-    const msg = `Hola! Quiero reservar:\n\n👤 ${form.name}\n✂️ ${form.service}\n📅 ${form.date}\n🕐 ${form.hour}\n\n¡Gracias!`
+    const msg = `Hola! Quiero reservar:\n\n ${form.name}\n ${form.service}\n ${form.date}\n ${form.hour}\n\n¡Gracias!`
     window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank')
   }
 

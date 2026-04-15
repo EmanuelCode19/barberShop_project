@@ -4,6 +4,7 @@ import video from '../assets/video/video.mp4'
 
 const WA = '393662533538'
 const WA_MSG = encodeURIComponent('Hola, quiero reservar una cita en El Rube Barber Shop.')
+const urlBokingWeb = 'https://www.sumupbookings.com/01elrubebarbershop'
 
 export default function Hero() {
   const [sc, setSc] = useState(false)
@@ -40,9 +41,13 @@ export default function Hero() {
               <a key={l} href={`#${l.toLowerCase()}`}
                 style={{ fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: linkColor, textDecoration: 'none', transition: 'color 0.3s' }}>{l}</a>
             ))}
+           <a href={`${urlBokingWeb}`} target="_blank" rel="noopener noreferrer"
+              style={{ fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', background: sc ? '#111' : 'rgba(255,255,255,0.95)', color: sc ? '#fff' : '#111', padding: '8px 16px', textDecoration: 'none', fontWeight: 500, transition: 'all 0.3s' }}>
+              Reserva Ahora via web
+            </a>
             <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
               style={{ fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', background: sc ? '#111' : 'rgba(255,255,255,0.95)', color: sc ? '#fff' : '#111', padding: '8px 16px', textDecoration: 'none', fontWeight: 500, transition: 'all 0.3s' }}>
-              Reserva Ahora
+              Reserva Ahora via Whatsapp
             </a>
           </div>
 
@@ -61,9 +66,13 @@ export default function Hero() {
               <a key={l} href={`#${l.toLowerCase()}`} onClick={() => setMenuOpen(false)}
                 style={{ display: 'block', fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#444', textDecoration: 'none', padding: '13px 0', borderBottom: '1px solid #f0f0f0' }}>{l}</a>
             ))}
-            <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}
+            <a href={`${urlBokingWeb}`} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}
               style={{ display: 'block', marginTop: 20, textAlign: 'center', fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', background: '#111', color: '#fff', padding: '13px 20px', textDecoration: 'none', fontWeight: 500 }}>
-              Reserva Ahora
+              Reserva en nuestra Web
+            </a>
+              <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}
+              style={{ display: 'block', marginTop: 20, textAlign: 'center', fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', background: '#111', color: '#fff', padding: '13px 20px', textDecoration: 'none', fontWeight: 500 }}>
+              Reserva via Whatsapp
             </a>
           </div>
         )}
