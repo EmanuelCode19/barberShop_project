@@ -98,7 +98,7 @@ export default function Hero() {
             </a>
             <a href="#servicios"
               style={{ fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#fff', padding: '12px 20px', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.4)' }}>
-              Ver precios
+              Ver precios de cortes
             </a>
           </div>
         </div>
